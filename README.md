@@ -72,6 +72,22 @@ To run the app locally:
 python app.py
 ```
 
+### 4. Preparing SHAP Visualizations
+
+Before running the SHAP dashboard, run the supporting script to generate the necessary .pkl files:
+
+To run the supporting script:
+```bash
+python data_model_loading.py
+```
+
+This script prepares the SHAP visualization environment by:
+-	Loading sample review data from datasets (e.g., IMDB or Yelp)
+- Initializing sentiment models (like DistilBERT)
+-	Computing SHAP values using a pre-defined explainer
+-	Saving the model and SHAP objects into .pkl files
+These outputs are later consumed by blocks_testing.py to generate visualizations in the SHAP dashboard.
+
 To launch the SHAP Explanation Dashboard for interpretability:
 
 ```bash
